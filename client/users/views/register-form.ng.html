@@ -1,0 +1,31 @@
+	<div layout="column" layout-align="center center">
+	Registrese!
+	<div>
+	<md-content md-theme="docs-dark" layout-padding layout="column" layout-sm="column">
+		KgApp
+  	</md-content>
+ 	<!--<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">-->
+    <div ng-show="rc.error" class="md-warn">
+      <small>{{ rc.error }}</small>
+    </div>  
+    <form name="registerform">
+        <md-input-container flex>
+          <md-icon md-svg-icon="content:ic_favorite_24px" ></md-icon>
+          <input type="text" ng-model="rc.credentials.name"  placeholder="Nombre (required)" ng-required="true">
+        </md-input-container>    
+        <md-input-container flex>
+          <md-icon md-svg-icon="content:ic_mail_24px" ></md-icon>
+          <input type="email" ng-model="rc.credentials.email"   placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+        <md-input-container flex>
+          <md-icon md-svg-icon="action:ic_lock_open_24px"></md-icon>
+          <input type="password" ng-model="rc.credentials.password" placeholder="Password (required)" ng-required="true">
+        </md-input-container>        
+       <section layout="row" layout-sm="column" layout-align="center center" layout-wrap> 
+      	<md-button md-no-ink class="md-raised md-primary"  ng-click="registerform.$valid &&  rc.register()">ACEPTAR</md-button>
+      	<md-button md-no-ink class="md-accent" ng-href="/login">CANCELAR</md-button>
+       </section>
+    </form>
+  <!--</md-whiteframe>  	-->
+	  </div>
+	</div>

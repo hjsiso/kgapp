@@ -6,7 +6,8 @@
 
 meteor-platform
 autopublish
-insecure
 angular
 angularui:angular-ui-router
 angular:angular-material
+accounts-password
+planettraining:material-design-icons

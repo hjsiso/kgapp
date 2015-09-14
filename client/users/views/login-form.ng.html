@@ -5,17 +5,21 @@
 		KgApp
   	</md-content>
  	<!--<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">-->
-    <form name="userForm">
+    <div ng-show="lc.error" class="md-warn">
+      <small>{{ lc.error }}</small>
+    </div>  
+    <form name="loginform">
+
         <md-input-container flex>
-          <label>Email</label>
-          <input type="email" ng-model="user.firstName">
+          <md-icon md-svg-icon="content:ic_mail_24px" ></md-icon>
+          <input type="email" ng-model="lc.credentials.email"  placeholder="Email (required)" ng-required="true">          
         </md-input-container>
         <md-input-container flex>
-          <label>Password</label>
-          <input type="password" ng-model="user.password">
+          <md-icon md-svg-icon="action:ic_lock_open_24px"></md-icon>
+          <input type="password" ng-model="lc.credentials.password" placeholder="Password (required)" ng-required="true">
         </md-input-container> 
        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>        
-        <md-button md-no-ink class="md-raised md-primary">Login</md-button>
+        <md-button md-no-ink class="md-raised md-primary" ng-click="loginform.$valid && lc.login()">Login</md-button>
         <md-button md-no-ink class="md-accent" ng-href="/register">Registrase</md-button>
        </section>
     </form>

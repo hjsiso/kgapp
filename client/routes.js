@@ -6,13 +6,15 @@ angular.module("kgapp").config(['$urlRouterProvider', '$stateProvider', '$locati
     $stateProvider
       .state('login', {
         url: '/login',
-        templateUrl: 'client/login/views/login-form.ng.html',
-        controller: 'LoginFormCtrl'
+        templateUrl: 'client/users/views/login-form.ng.html',
+        controller: 'LoginFormCtrl',
+        controllerAs: 'lc'
       })
       .state('register', {
         url: '/register',
-        templateUrl: 'client/register/views/register-form.ng.html',
-        controller: 'RegisterFormCtrl'        
+        templateUrl: 'client/users/views/register-form.ng.html',
+        controller: 'RegisterFormCtrl' ,
+        controllerAs: 'rc'       
       });
  
     $urlRouterProvider.otherwise("/login");
