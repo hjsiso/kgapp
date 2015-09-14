@@ -16,7 +16,12 @@ angular.module("kgapp").controller("RegisterFormCtrl", ['$meteor', '$state',
           $state.go('parties');
         },
         function (err) {
-          vm.error = 'Registration error - ' + err;
+          if(err.reason.indexOf("403")){
+            vm.error = 'Registration error - Cuenta ya existe';  
+          }else{
+            vm.error = 'Registration error - ' + err;
+          }
+          
         }
       );
     };
