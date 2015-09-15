@@ -12,7 +12,7 @@ angular.module("kgapp").controller("LoginFormCtrl", ['$meteor', '$state',
     vm.login = function () {
       $meteor.loginWithPassword(vm.credentials.email, vm.credentials.password).then(
         function () {
-          $state.go('parties');
+          $state.go('home');
         },
         function (err) {
           vm.error = 'Login error - ' + err;

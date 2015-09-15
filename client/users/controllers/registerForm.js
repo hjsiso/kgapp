@@ -5,7 +5,11 @@ angular.module("kgapp").controller("RegisterFormCtrl", ['$meteor', '$state',
     vm.credentials = {
       email: '',
       password: '',
-      name:''
+      profile: {
+        name: '',
+        type: '',
+        groups:[]
+      }
     };
  
     vm.error = '';
