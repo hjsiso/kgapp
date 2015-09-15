@@ -1,5 +1,5 @@
-angular.module("kgapp").controller("RegisterFormCtrl", ['$meteor', '$state',
-  function ($meteor, $state) {
+angular.module("kgapp").controller("RegisterFormCtrl", ['$meteor', '$state','$mdToast',
+  function ($meteor, $state, $mdToast) {
     var vm = this;
  
     vm.credentials = {
@@ -13,19 +13,26 @@ angular.module("kgapp").controller("RegisterFormCtrl", ['$meteor', '$state',
     };
  
     vm.error = '';
- 
+    vm.errormsg = '';
+
     vm.register = function () {
       $meteor.createUser(vm.credentials).then(
         function () {
-          $state.go('parties');
+          $state.go('login');
         },
         function (err) {
-          if(err.reason.indexOf("403")){
-            vm.error = 'Registration error - Cuenta ya existe';  
+          if(err.error == 403){
+            vm.errormsg = 'Error de Registro - Cuenta ya existe';  
           }else{
-            vm.error = 'Registration error - ' + err;
+            vm.errormsg = 'Registration error - ' + err.reason;
           }
-          
+          $mdToast.show(
+              $mdToast.simple()
+              .content(vm.errormsg)
+              .position('top')
+              .hideDelay(2000)
+          );          
+
         }
       );
     };

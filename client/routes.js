@@ -13,7 +13,8 @@ angular.module("kgapp").config(['$urlRouterProvider', '$stateProvider', '$locati
       .state('home', {
         url: '/home',
         templateUrl: 'client/home/views/home.ng.html',
-        controller: 'homeCtrl'
+        controller: 'homeCtrl',
+        controllerAs: 'hc'     
       })      
       .state('register', {
         url: '/register',
