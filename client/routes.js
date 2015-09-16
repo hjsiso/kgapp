@@ -4,6 +4,12 @@ angular.module("kgapp").config(['$urlRouterProvider', '$stateProvider', '$locati
     $locationProvider.html5Mode(true);
  
     $stateProvider
+      .state('loginopt', {
+        url: '/loginopt',
+        templateUrl: 'client/home/views/home-loginopt.ng.html',
+        controller: 'LoginOptCtrl',
+        controllerAs: 'lo'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'client/users/views/login-form.ng.html',
@@ -23,5 +29,5 @@ angular.module("kgapp").config(['$urlRouterProvider', '$stateProvider', '$locati
         controllerAs: 'rc'       
       });
  
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/loginopt");
   }]);

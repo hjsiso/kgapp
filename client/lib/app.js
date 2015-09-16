@@ -21,9 +21,9 @@ angular.module('kgapp')
 angular.module('kgapp').config( function($mdThemingProvider){
     // Configure a dark theme with primary foreground yellow
     $mdThemingProvider.theme('default')
-        .primaryPalette('lime')
+        .primaryPalette('purple')
         .accentPalette('pink')
-        .backgroundPalette('indigo')
+        //.backgroundPalette('purple')
         .warnPalette('amber');
  
 });
