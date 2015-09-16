@@ -1,10 +1,13 @@
 	<md-content  layout="column"  flex layout-align="center center" style="height:100%">
-        <img ng-src="/images/atom.png" class="md-card-image" alt="aTOM" height="100px" width="100px" align="center">
+      
+      <br><br>
+      <img ng-src="/images/atom.png" class="md-card-image" alt="aTOM" height="100px" width="100px" align="center">
       <div layout="column" layout-align="center center">
       <div class="md-body-2"></div>
-        <br><br><br>
-      <div>
-      <md-fab-speed-dial md-open="false" md-direction="down" ng-class="md-scale">
+        <br><br>
+
+<div class="lock-size" layout="row" layout-align="center center">
+      <md-fab-speed-dial md-open="false" md-direction="down"   class="md-fling">
         <md-fab-trigger>
           <md-button aria-label="menu" class="md-fab md-warn">
             <md-tooltip md-direction="top">Login</md-tooltip>
@@ -12,24 +15,26 @@
           </md-button>
         </md-fab-trigger>
         <md-fab-actions>
-          <md-button aria-label="Email" class="md-fab md-raised md-mini">
-            <md-tooltip md-direction="top">email && passwd</md-tooltip>
-            <md-icon md-svg-src="/images/icons/ic_email_black_24px.svg" aria-label="Email"></md-icon>
-          </md-button>
-          <!--
-          <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-            <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
+         <md-button ng-click="lo.access()" aria-label="Email" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left">Email</md-tooltip>
+            <md-icon md-svg-src="/images/icons/lock_24px.svg" aria-label="Email"></md-icon>
           </md-button>
           <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-            <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
+            <md-tooltip md-direction="right">Facebook</md-tooltip>
+            <md-icon md-svg-src="/images/icons/facebook_24px.svg" aria-label="Facebook"></md-icon>
           </md-button>
-          <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
-            <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+          <md-button aria-label="Google" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left">Google</md-tooltip>
+            <md-icon md-svg-src="/images/icons/google_24px.svg" aria-label="Google"></md-icon>
           </md-button>
-          -->
+          <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="right">Twitter</md-tooltip>
+            <md-icon md-svg-src="/images/icons/twitter_24px.svg" aria-label="Twitter"></md-icon>
+          </md-button>
         </md-fab-actions>
       </md-fab-speed-dial>
-      	</div>
-	</div>
-    <br><br>
+    </div>
+      <a class="md-primary" href="/"><small>¿Olvidaste tu contraseña?</small></a>
+      <a class="md-primary" href="/register"><small>Registrate en aTOM</small></a>
+    </div>  
       </md-content>

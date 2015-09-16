@@ -1,8 +1,9 @@
 	<md-content  layout="column"  flex layout-align="center center" style="height:100%">
-        <img ng-src="/images/atom.png" class="md-card-image" alt="aTOM" height="100px" width="100px" align="center">
+      <div layout="column" layout-align="top center">
+      <img ng-src="/images/atom.png" class="md-card-image" alt="aTOM" height="36px" width="36px" align="center">
+       </div>
       <div layout="column" layout-align="center center">
-      <div class="md-body-2">Bienvenido a KgApp!</div>
-        <br><br><br>
+        <br><br>
       <div>
               <div ng-show="lc.error" class="md-warn">
                 <small>{{ lc.error }}</small>
@@ -18,7 +19,7 @@
                   </md-input-container> 
                  <section layout="row" layout-sm="row" layout-align="center center" layout-wrap>        
                   <md-button md-no-ink class="md-raised md-primary" ng-click="loginform.$valid && lc.login()" width="450px">Login</md-button>
-                  <md-button md-no-ink class="md-accent" ng-href="/register">Registrase</md-button>        
+                  <md-button md-no-ink class="md-accent" ng-href="/loginopt">CANCELAR</md-button>        
                  </section>
               </form>
       	</div>

@@ -11,3 +11,6 @@ angularui:angular-ui-router
 angular:angular-material
 accounts-password
 planettraining:material-design-icons
+accounts-facebook
+accounts-twitter
+accounts-google
