@@ -1,12 +1,6 @@
-  <md-content md-theme="docs-dark" layout-padding layout="column" layout-sm="column" layout-align="center center">
-    <br><br>
+  <md-content  layout="column"  flex layout-align="center center" style="height:100%">
      <img ng-src="/images/atom.png" class="md-card-image" alt="aTOM" height="100px" width="100px" align="center">
-  </md-content>	
-  <div layout="column" layout-align="center center">
-	<small>Registrese en KgApp!</small>
-      <br>
-	<div>
- 	<!--<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">-->
+  	<div class="md-body-2">Registrese en KgApp!</div>
     <div ng-show="rc.error" class="md-warn">
       <small class="md-warn">{{ rc.error }}</small>
     </div>  
@@ -27,9 +21,5 @@
       	<md-button md-no-ink class="md-raised md-primary"  ng-click="registerform.$valid &&  rc.register()">ACEPTAR</md-button>
       	<md-button md-no-ink class="md-accent" ng-href="/login">CANCELAR</md-button>
        </section>
-
     </form>
-  <!--</md-whiteframe>  	-->
-        
-	  </div>
-	</div>
+ </md-content> 

@@ -2,12 +2,10 @@
 <head>
   <base href="/">
 </head>
-<body ng-app="kgapp">
-    <div layout="row" flex style="height: 100%">
-        <div layout="column" flex id="content">
-            <md-content layout="column" flex class="md-padding">
-            <div ui-view ></div>
-            </md-content>
-        </div>
-    </div>
+<body ng-app="kgapp"  layout="column">
+
+            <!--<md-content layout="column" flex class="md-padding">-->
+            <div ui-view layout-fill style='height:100%'></div>
+            <!--</md-content>        -->
+    
 </body>
