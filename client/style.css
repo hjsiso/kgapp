@@ -22,3 +22,7 @@
   background-color: #aaa; }
 .fabSpeedDialdemoMoreOptions md-content div[flex="50"] {
   padding: 15px; }
+
+ body{
+ 	font-size: 75%;
+ } 
