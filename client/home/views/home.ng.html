@@ -1,14 +1,57 @@
-    <md-toolbar layout="row">
+<style>
+#rc-imageselect {transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;}
+</style>
+<style>
+@media screen and (max-height: 575px){
+#rc-imageselect, .g-recaptcha {transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;}
+</style>
+   <md-toolbar layout="row">
       <div class="md-toolbar-tools">
         <md-button  hide-gt-sm class="md-icon-button">
-          <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+          <md-icon aria-label="Menu" md-svg-icon="/images/icons/apps.svg"></md-icon>
         </md-button>
-        <h1>Hello World</h1>
+        <h1>Ng App</h1>
+         <span flex></span>
+         <md-button class="md-icon-button" aria-label="Salir" ng-click="hc.logout()">
+            <md-icon aria-label="Salir" md-svg-icon="/images/icons/exit-to-app.svg"></md-icon>
+          </md-button>
       </div>
-   </md-toolbar>
-	<div layout="column" layout-align="center center" md-theme="home">
-	<h1>Home! {{currentUser.profile.name}}</h1>	
-	</div>
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>       	
-      	<md-button md-no-ink class="md-accent" ng-click="hc.logout()">SALIR</md-button>
-</section>
+  </md-toolbar>
+  <br><br>
+  <section layout="column" layout-sm="column" layout-align="center center"  >        
+     <form name="loginform">
+    <md-whiteframe class="md-whiteframe-z3" layout layout-align="center "> 
+  <md-content layout-padding >
+      <md-input-container md-no-float>
+        <label>Nombre</label>          
+        <input ng-model="hc.user.name" type="text">
+      </md-input-container>
+      <md-input-container md-no-float>          
+          <label>Telefono</label>  
+        <input ng-model="hc.user.phone" type="text" >
+      </md-input-container>
+      <md-input-container md-no-float>
+        <label>Email</label>  
+        <input ng-model="hc.user.email" type="text" >
+      </md-input-container>
+      <md-input-container md-no-float> 
+        <label>Direccion</label>           
+        <input ng-model="hc.user.address" type="text">
+      </md-input-container>
+      <md-input-container md-no-float>          
+      <md-switch ng-model="isActive" aria-label="Finished">
+      Activo?
+      </md-switch>
+    </md-input-container>
+    <md-progress-circular md-mode="determinate" value="{{hc.determinateValue}}">time</md-progress-circular>
+    <div class="g-recaptcha"  data-size="normal"  data-sitekey="6Lc2cg0TAAAAADolJfQ4LXqWG0-FtWxV08Szk_em"></div>
+    <section layout="row" layout-sm="row" layout-align="center center" layout-wrap>        
+    <md-button md-no-ink class="md-raised md-primary" ng-click="hc.login()" width="450px">Aceptar</md-button>
+     <md-button md-no-ink class="md-accent" ng-href="/">CANCELAR</md-button> 
+     </section>      
+    </md-content>    
+
+  </md-whiteframe>
+
+ </form>
+  </section>

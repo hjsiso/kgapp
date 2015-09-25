@@ -29,5 +29,6 @@ angular.module("kgapp").config(['$urlRouterProvider', '$stateProvider', '$locati
         controllerAs: 'rc'       
       });
  
-    $urlRouterProvider.otherwise("/loginopt");
+    //$urlRouterProvider.otherwise("/loginopt");
+    $urlRouterProvider.otherwise("/home");
   }]);
