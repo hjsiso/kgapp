@@ -38,12 +38,14 @@
         <label>Direccion</label>           
         <input ng-model="hc.user.address" type="text">
       </md-input-container>
-      <md-input-container md-no-float>          
-      <md-switch ng-model="isActive" aria-label="Finished">
+    <!--
+    <md-input-container md-no-float>          
+      <md-switch ng-model="hc.activo" aria-label="Finished">
       Activo?
       </md-switch>
     </md-input-container>
     <md-progress-circular md-mode="determinate" value="{{hc.determinateValue}}">time</md-progress-circular>
+    -->
     <div class="g-recaptcha"  data-size="normal"  data-sitekey="6Lc2cg0TAAAAADolJfQ4LXqWG0-FtWxV08Szk_em"></div>
     <section layout="row" layout-sm="row" layout-align="center center" layout-wrap>        
     <md-button md-no-ink class="md-raised md-primary" ng-click="hc.login()" width="450px">Aceptar</md-button>

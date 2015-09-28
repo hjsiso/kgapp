@@ -1,3 +1,3 @@
-/*angular.module('kgapp').config(function(ServerAPIProvider) {
+angular.module('kgapp').config(function(ServerAPIProvider) {
   ServerAPIProvider.register('Calculator');
-});*/
+});	

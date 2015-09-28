@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 autopublish
 angular
 angularui:angular-ui-router
@@ -14,3 +13,18 @@ planettraining:material-design-icons
 accounts-facebook
 accounts-twitter
 accounts-google
+angular:angular-server@1.4.0
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
