@@ -1,4 +1,4 @@
-angular.module('kgapp',['angular-meteor','ui.router','ngMaterial']);
+angular.module('kgapp',['angular-meteor','ui.router','ngMaterial','ngAnimate']);
 
 
 var themeIcons = ['$mdIconProvider' , function ($mdIconProvider) {
